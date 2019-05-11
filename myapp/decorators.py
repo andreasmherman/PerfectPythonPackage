@@ -14,6 +14,6 @@ def log_timing(f):
     def wrapper(*args, **kwargs):
         s = time()
         result = f(*args, **kwargs)
-        logging.info('{} execution took {} seconds.'.format(f.__name__, time.time() - s))
+        logging.info('{} execution took {} seconds.'.format(f.__name__, time() - s))
         return result
     return wrapper

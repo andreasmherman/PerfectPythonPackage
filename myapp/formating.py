@@ -2,15 +2,6 @@
 
 from . import decorators
 
-# Single Responsibility Principle by separating the format and the content for the document.
-
-# Open-closed Principle when the Formater class does not need to be modified to be extended.
-
-# Dependency Inversion by making HTMLDocumentFormater and WebPageHTMLDocumentFormater be dependent on the abstract
-# TextForamter and DocumentFormater. Liskov Substitution Principle.
-
-# Interface Segregation Principle by forcing classes depend on methods they do not use.
-
 
 class TextFormater:
     """
@@ -122,16 +113,16 @@ class WebPageHTMLDocumentFormater(HTMLDocumentFormater):
     Formats the document as a HTML web page.
     """
 
-    def __init__(self, header_text, **kwargs):
+    def __init__(self, header_text, *args):
         """
         Constructor
 
         :param header_text: Header text for the web page
         :type header_text: str
-        :param kwargs: Arguments requested by HTMLDocumentFormater
+        :param args: Arguments requested by HTMLDocumentFormater
         """
         self._header_text = header_text
-        super().__init__(**kwargs)
+        super(WebPageHTMLDocumentFormater, self).__init__(*args)
 
     @decorators.log_timing
     def format(self, document):
