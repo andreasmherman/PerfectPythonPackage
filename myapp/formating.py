@@ -2,6 +2,23 @@
 
 from . import decorators
 
+# Follow SOLID design principles
+
+# Single Responsibility Principle: Every software entity should only have a single responsibility
+# By separating the format and the content for the document.
+
+# Open-closed Principle: Software entities should be open for extension but closed for modification
+# The Formater class does not need to be modified to be extended.
+
+# Liskov Substitution Principle: The aim of this principle is to ascertain that a sub-class can
+# assume the place of its super-class without errors.
+
+# Interface Segregation Principle: No client should be forced to depend on methods it does not use.
+# Light weight abstract classes.
+
+# Dependency Inversion: One should depend upon abstraction, not concretions
+# By making HTMLDocumentFormater and WebPageHTMLDocumentFormater be dependent on the abstract classes.
+
 
 class TextFormater:
     """

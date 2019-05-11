@@ -5,6 +5,9 @@ from .context import myapp
 import unittest
 from unittest import mock
 
+# Unit tests are used to test the if the expected output is given
+# Mock tests are used to test if a mocked object is being called in the right way
+
 
 class BasicTestSuite(unittest.TestCase):
 
