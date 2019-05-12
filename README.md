@@ -1,5 +1,7 @@
 # PerfectPythonPackage
 
+[![Build Status](https://scrutinizer-ci.com/g/andreasmherman/PerfectPythonPackage/badges/build.png?b=master)](https://scrutinizer-ci.com/g/andreasmherman/PerfectPythonPackage/build-status/master)
+
 This structure sets up
 - A simple structure for packages in python
 - Unit tests examples (unittest and mock)
