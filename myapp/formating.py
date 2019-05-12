@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import abc
+
 from . import decorators
 
 # Follow SOLID design principles
@@ -24,7 +26,7 @@ class TextFormater:
     """
     Interface for text formating.
     """
-
+    @abc.abstractmethod
     def format(self, text):
         raise NotImplementedError
 
@@ -33,7 +35,7 @@ class DocumentFormater:
     """
     Interface for document formating.
     """
-
+    @abc.abstractmethod
     def format(self, document):
         raise NotImplementedError
 
